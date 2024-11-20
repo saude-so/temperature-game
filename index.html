@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Guessing Game</title>
+    <link rel="stylesheet" href="temp.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌡️ Temperature Guessing Game</h1>
+        </header>
+        <main>
+            <div id="start-screen">
+                <p>Welcome to the ultimate temperature guessing challenge!</p>
+                <button class="btn" onclick="startGame()">Start Game</button>
+            </div>
+            <div id="game-screen" class="hidden">
+                <p>Choose your difficulty level:</p>
+                <button class="btn" onclick="setDifficulty(1)">Easy (-50 to 50, 10 attempts)</button>
+                <button class="btn" onclick="setDifficulty(2)">Medium (-100 to 100, 7 attempts)</button>
+                <button class="btn" onclick="setDifficulty(3)">Hard (-250 to 250, 5 attempts)</button>
+            </div>
+            <div id="guess-screen" class="hidden">
+                <p id="prompt"></p>
+                <input type="number" id="guess" placeholder="Enter your guess">
+                <button class="btn" onclick="submitGuess()">Submit Guess</button>
+                <p id="feedback"></p>
+            </div>
+            <div id="end-screen" class="hidden">
+                <p id="result"></p>
+                <button class="btn" onclick="restartGame()">Play Again</button>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 GuessMaster. Made with ❤️</p>
+        </footer>
+    </div>
+    <script src="temp.js"></script>
+</body>
+</html>
